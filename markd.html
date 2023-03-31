@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/93866eaaa9.js" crossorigin="anonymous"></script>
+		<title>Groovy Ghost</title>
+	</head>
+
+	<body class="light-mode">
+
+		<nav class="menu">
+			<div class="nav-left">
+				<ul>
+					<li><a href="https://groovyghost.in"><img class="logo" src="favicon.png" alt=""><span class="sitename">Groovy_Ghost</span></a></li>
+				</ul>
+			</div>
+			<div class="nav-right">
+				<ul>
+					<li style="padding: 9px"><a id="darkmodetoggle" class="fas fa-moon" onclick="switchTheme()"></a></li>
+					<li><a href="mailto:grovyghost@protonmail.com">contact</a></li>					
+					<li><a href="https://github.com/groovyghost">github</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<article>
+<h1 id="Learn%20Markdown">Learn Markdown</h1>
+
+<p><sub>10-October &#8216;21</sub></p>
+
+<p>For website&#47;blog instead of writing pure HTML and uploading it to a server like a caveman i started using Markdown, a lightweight markup language for creating formatted text using a plain-text editor that is appealing to human readers in its source code form.</p>
+
+<h3 id="Basic%20markdown%20syntax">Basic markdown syntax</h3>
+
+<pre><code>
+# Start a heading with one hash
+
+## Start a subheading with two hashes
+
+Paragraphs are separated by empty lines.
+
+**Bold text** is wrapped in double asterisks,
+
+_italic_ in underscores,
+
+`monospace` in backticks.
+
+[A link](https:&#47;&#47;groovyghost.in&#47;).
+
+![An image](&#47;avatar.jpeg)
+
+    # Indented code block
+    hello() { echo &#39;Hello&#39;; }
+
+A list of items:
+
+- Each item is on its line
+- Lines start with `-`
+
+An ordered list:
+
+1. The first item
+1. The second item can start with `1.` too
+1. Markdown handles the numbering for you.
+
+</code></pre>
+
+<p>To convert markdown to HTML you can use <a href="https://kristaps.bsd.lv/lowdown/">lowdown</a>, <a href="https://pandoc.org/">pandoc</a>, or with original <a href="https://daringfireball.net/projects/markdown/">markdown.pl</a></p>
+
+<p>Credit to <a href="https://www.markdownguide.org/basic-syntax">markdownguide</a></p>
+</article>
+
+<footer>
+	<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></br>
+	Created with <i class="far fa-heart"></i> by Ghost</p>
+</footer>
+<script>
+// Get the theme toggle input
+const currentTheme = localStorage.getItem("theme");// If the current local storage item can be found
+
+// Function that will switch the theme based on the if the theme toggle is checked or not
+function switchTheme() {
+  if (document.documentElement.getAttribute("data-theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    // Set the user's theme preference to dark
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    // Set the user's theme preference to light
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+// Get the current theme from local storage
+if (currentTheme) {
+        // Set the body data-theme attribute to match the local storage item
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        if (currentTheme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+        }
+}
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log('user prefers dark scheme, going dark');
+        document.documentElement.setAttribute("data-theme", "dark");
+        }
+</script>
+
+        </body>
+</html>

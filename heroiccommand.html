@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="style.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/93866eaaa9.js" crossorigin="anonymous"></script>
+		<title>Groovy Ghost</title>
+	</head>
+
+	<body class="light-mode">
+
+		<nav class="menu">
+			<div class="nav-left">
+				<ul>
+					<li><a href="https://groovyghost.in"><img class="logo" src="favicon.png" alt=""><span class="sitename">Groovy_Ghost</span></a></li>
+				</ul>
+			</div>
+			<div class="nav-right">
+				<ul>
+					<li style="padding: 9px"><a id="darkmodetoggle" class="fas fa-moon" onclick="switchTheme()"></a></li>
+					<li><a href="mailto:grovyghost@protonmail.com">contact</a></li>					
+					<li><a href="https://github.com/groovyghost">github</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<article>
+<h1 id="10%20super%20heroic%20Linux%20commands%20that%20you%20probably%20aren&amp;#8217;t%20using">10 super heroic Linux commands that you probably aren&#8217;t using</h1>
+
+<p><sub>12-October &#8216;21</sub></p>
+
+<p>Linux has tons of nifty commands, here&#8217;s 10 more to add to your toolbox.</p>
+
+<ol>
+<li><p>Redo last command but with sudo</p>
+
+<p><code>sudo !!</code></p></li>
+<li><p>Open an editor to run a command</p>
+
+<p>ctrl+x+e</p></li>
+<li><p>Create a super fast ram disk</p>
+
+<p><code>mkdir -p &#47;mnt&#47;ram</code></p>
+
+<p><code>mount -t tmpfs tmpfs &#47;mnt&#47;ram -o size=8192M</code></p></li>
+<li><p>Messed up a long command?</p>
+
+<p><code>fc</code> will open up your last command in editor.</p></li>
+<li><p>netstat: command not found ?</p>
+
+<p><code>ss</code> Socket statistics, a substitue of netstat</p></li>
+<li><p>Quickly create folders</p>
+
+<p><code>mkdir -p folder&#47;{sub1,sub2}&#47;{sub1,sub2,sub3}</code></p>
+
+<p><code>mkdir -p folder&#47;{1..100}&#47;{1..100}</code> Also works with number ranges</p></li>
+<li><p>Intercept stdout and log to file</p>
+
+<p><code>cat file | tee -a log | cat &#62; &#47;dev&#47;null</code></p></li>
+<li><p>Solve simple mathematical calculations from terminal</p>
+
+<p><code>expr</code> </p>
+
+<p><code>expr 2 + 2</code></p></li>
+<li><p>Want to know history of last logged in users?</p>
+
+<p><code>last</code> This command comes to rescue here</p></li>
+<li><p>exit terminal but leave all processes running</p>
+
+<p><code>disown -a &#38;&#38; exit</code></p></li>
+</ol>
+
+<p><strong>Bonus</strong> : <code>python -m http.server</code> or <code>python3 -m http.server</code></p>
+
+<p>Creates a simple web page for the current working directory over port 8000.</p>
+</article>
+
+<footer>
+	<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></br>
+	Created with <i class="far fa-heart"></i> by Ghost</p>
+</footer>
+<script>
+// Get the theme toggle input
+const currentTheme = localStorage.getItem("theme");// If the current local storage item can be found
+
+// Function that will switch the theme based on the if the theme toggle is checked or not
+function switchTheme() {
+  if (document.documentElement.getAttribute("data-theme") === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    // Set the user's theme preference to dark
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    // Set the user's theme preference to light
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+// Get the current theme from local storage
+if (currentTheme) {
+        // Set the body data-theme attribute to match the local storage item
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        if (currentTheme === "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+        }
+}
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log('user prefers dark scheme, going dark');
+        document.documentElement.setAttribute("data-theme", "dark");
+        }
+</script>
+
+        </body>
+</html>

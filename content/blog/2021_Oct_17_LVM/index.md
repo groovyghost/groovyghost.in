@@ -19,7 +19,7 @@ Acronyms you must know!
 
 *LV* – Logical Volume
 
-{{ image(src="lvm-guide.jpeg", alt="LVM") }}
+{{ image(src="lvm-guide.jpg", alt="LVM") }}
 
 *LVM Commands*
 #### LVM Layer 1 – Hard Drives, Partitions, and Physical Volumes

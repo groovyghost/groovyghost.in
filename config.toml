@@ -9,6 +9,6 @@ default_language = "en"
 [markdown]
 highlight_code = true
 highlight_theme = "css"
-
+render_emoji = true #(e.g.: :smile: => 😄)
 [extra]
 author = "Ghost"

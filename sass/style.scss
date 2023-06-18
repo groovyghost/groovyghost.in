@@ -408,3 +408,66 @@ footer {
 	justify-content: space-between;
 	font-size: 13px;
 }
+
+.waving {
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    animation-name: wave-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block !important;
+
+    &:before {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    div {
+      opacity: 0;
+      transform: translate(-100%, 0);
+    }
+  }
+
+  &:before {
+    content: attr(data-hover);
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

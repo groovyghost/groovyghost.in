@@ -17,4 +17,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BUILD_THEMES: false
-        PAGES_BRANCH: gh-pages
+        PAGES_BRANCH: cloudflare

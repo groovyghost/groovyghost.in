@@ -1,6 +1,7 @@
 # groovyghost.in
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/groovyghost/groovyghost.in/deploy.yml?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/groovyghost/groovyghost.in?style=for-the-badge)
 
 ## :space_invader: Tech Stack
 

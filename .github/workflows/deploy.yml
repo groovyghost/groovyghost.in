@@ -3,7 +3,7 @@ name: Zola Build & Deploy
 on:
  push:
   branches:
-   - develop
+   - master
   paths-ignore:
     - 'README.md'
 
@@ -12,10 +12,10 @@ jobs:
     name: Publish site
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout develop
+    - name: Checkout main
       uses: actions/checkout@v3.0.0
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@v0.17.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PAGES_BRANCH: dev-cloudflare
+        PAGES_BRANCH: cloudflare

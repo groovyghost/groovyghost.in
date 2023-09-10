@@ -1,6 +1,6 @@
-base_url = "https://example.com"
+base_url = "https://groovyghost.in"
 title = "Groovyghost"
-description = "xxxx xxxx xxxx"
+description = "Rahul's Knowledge base"
 default_language = "en"
 theme = "serene"
 output_dir = "public"

@@ -1,6 +1,6 @@
 name: Zola Build & Deploy
 
-on: 
+on:
  push:
   branches:
    - master
@@ -18,5 +18,4 @@ jobs:
       uses: shalzz/zola-deploy-action@v0.17.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_THEMES: false
         PAGES_BRANCH: cloudflare

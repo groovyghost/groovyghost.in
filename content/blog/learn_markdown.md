@@ -1,13 +1,20 @@
 +++
 title = "Learn Markdown"
-date = "2021-10-10"
+date = 2021-10-10
+description = "Learn Markdown"
+[extra]
+lang = "en"
+toc = true
+[taxonomies]
+categories = ["Tech"]
+tags = ["markdown", "writing"]
 +++
 
 For website/blog instead of writing pure HTML and uploading it to a server like a caveman i started using Markdown, a lightweight markup language for creating formatted text using a plain-text editor that is appealing to human readers in its source code form.
 
 ### Basic markdown syntax
 
-```
+```md
 # Start a heading with one hash
 
 ## Start a subheading with two hashes
@@ -42,3 +49,4 @@ An ordered list:
 To convert markdown to HTML you can use [lowdown](https://kristaps.bsd.lv/lowdown/), [pandoc](https://pandoc.org/) or with [original markdown.pl](https://daringfireball.net/projects/markdown/)
 
 Credit to [markdownguide](https://www.markdownguide.org/basic-syntax)
+

@@ -18,7 +18,7 @@ Ctrl+x+e
 ```
 mkdir -p /mnt/ram
 
-mount -t tmpfs tmpfs /mnt/ram -o size=8192M 
+mount -t tmpfs tmpfs /mnt/ram -o size=8192M
 ```
 
 4. Messed up a long command?
@@ -61,3 +61,4 @@ cat file | tee -a log | cat > /dev/null
 Bonus : `python -m http.server`
 
 Creates a simple web page for the current working directory over port 8000.
+

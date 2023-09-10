@@ -32,7 +32,8 @@ So if you’re running Windows it’s actually pretty easy to clear out your DNS
 However you could run into more serious problems if a piece of malware has poisoned your DNS cache by making DNS entries that are stored locally that point to malicious websites. For example, an attacker could tell your PC to make a website point to the IP address of a website running a hack scan that tries to convince you to give up your personal information.
 So if you’re getting weird redirects like this running a reputable anti-malware application may be able to help.
 
-{{ image (src="dns.jpg", alt="DNS") }}
+{{ figure (src="/assests/dns.jpg", caption="DNS") }}
 
 ##### Verdict
 Despite its vulnerabilities, DNS has made the internet extremely easy to use . Thanks to it we don’t have to punch in numerical IP addresses like like phone numbers except longer every time we want to surf the web and given how hard it is for people to remember phone numbers that’s just not a world I would want to live in.
+

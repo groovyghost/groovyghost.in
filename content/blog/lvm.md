@@ -19,7 +19,7 @@ Acronyms you must know!
 
 *LV* – Logical Volume
 
-{{ image(src="lvm-guide.jpg", alt="LVM") }}
+{{figure(src="/assests/lvm-guide.jpg", alt="LVM",caption="LVM")}}
 
 *LVM Commands*
 #### LVM Layer 1 – Hard Drives, Partitions, and Physical Volumes
@@ -54,3 +54,4 @@ Acronyms you must know!
 
 #### Conclusion
 LVM is fantastic for managing a system, but remember that the more drives you make in a volume group that the likely it is to fail. Instead of having one point of failure you can open yourself up for multiple points when making a large system with multiple drives.
+

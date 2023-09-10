@@ -1,6 +1,6 @@
 +++
-title = "groovyghost::blog"
-description = "The blog of @groovyghost"
+title = "Groovyghost Blog"
+description = "The blog of groovyghost"
 sort_by = "date"
 template = "blog.html"
 page_template = "post.html"

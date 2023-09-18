@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Groovyghost - Groovyghost Blog</title>
+      <link>https://groovyghost.in/blog/</link>
+      <description>Rahul&#x27;s Knowledge base</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://groovyghost.in/blog/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>DNS - How it works?</title>
+          <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://groovyghost.in/blog/dns/</link>
+          <guid>https://groovyghost.in/blog/dns/</guid>
+          <description>&lt;p&gt;&lt;strong&gt;What is DNS&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose I were to get into a taxi after a night on the town and tell the driver “My house” when he asked me where we’re headed,Unless the driver some how very creepily already knows where I live he’ll probably tell me to stop being a tool and give him an actual address where he can actually drop me off. Although this scenario has probably occurred in plenty of taxi cabs, your computer or phone can have a much easier time figuring out where to take you on the internet thanks to the &lt;em&gt;Domain Name System&lt;&#x2F;em&gt; commonly referred to as DNS.&lt;&#x2F;p&gt;
+&lt;p&gt;You see even though most of us get to our favorite websites by punching in addresses like google.com or groovyghost.in, your browser actually needs to know the IP address of the site you’re trying to access.&lt;&#x2F;p&gt;
+&lt;p&gt;So to do this it sends a request to the DNS which is sort of like the Internet’s version of the Yellow Pages that matches a site URL or a &lt;strong&gt;“Uniform Resource locator”&lt;&#x2F;strong&gt; to an IP address.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;how-does-dns-work&quot;&gt;How does DNS work?&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-does-dns-work&quot; aria-label=&quot;Anchor link for: how-does-dns-work&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The DNS request first goes to a recursive name server which is typically operated by your internet service provider but you can also use public servers managed by Google or other organizations if your ISP resolver is having issues.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;A recursive name server might have the IP address of the website you want to access already stored but if it doesn’t it will go to one of &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.iana.org&#x2F;domains&#x2F;root&#x2F;servers&quot;&gt;13 root servers&lt;&#x2F;a&gt; which manage requests for top-level domains like com or.org.Although that seems like a tiny number of servers by the way they actually use redundant physical Hardware all over the globe to make sure these requests are handled and handled quickly.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Your request is then sent to the appropriate top level domain server which will then contact authoritative name servers that contain a authoritative list of IP addresses and matching URLs which is updated whenever someone buys and registers a domain once the IP address you want is retrieved.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;It’s sent back to the recursive name server and then on to your computer.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h5 id=&quot;dns-caching&quot;&gt;DNS Caching&lt;a class=&quot;zola-anchor&quot; href=&quot;#dns-caching&quot; aria-label=&quot;Anchor link for: dns-caching&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h5&gt;
+&lt;p&gt;To save time in the future and make things more efficient both the recursive name server and your own computer will cache DNS entries for a while so the next time you want to visit the same website you won’t have to go through this whole rigmarole instead your computer will either know the correct IP right away or it will be able to get it directly from the recursive server.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;common-dns-issue&quot;&gt;Common DNS issue&lt;a class=&quot;zola-anchor&quot; href=&quot;#common-dns-issue&quot; aria-label=&quot;Anchor link for: common-dns-issue&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h5&gt;
+&lt;p&gt;DNS usually works fairly well for most people but if a website changes IP addresses this can cause problems especially if your computer is trying to use its own cache. This will usually manifest as lots of random 404 errors or taxi drivers taking you to the wrong place if we were to look back to our original analogy.&lt;&#x2F;p&gt;
+&lt;p&gt;So if you’re running Windows it’s actually pretty easy to clear out your DNS cache just by opening the command prompt as an admin and entering ipconfig&#x2F;flushdns this command which hopefully will fix the problem.&lt;&#x2F;p&gt;
+&lt;h5 id=&quot;dns-poisoning&quot;&gt;DNS Poisoning&lt;a class=&quot;zola-anchor&quot; href=&quot;#dns-poisoning&quot; aria-label=&quot;Anchor link for: dns-poisoning&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h5&gt;
+&lt;p&gt;However you could run into more serious problems if a piece of malware has poisoned your DNS cache by making DNS entries that are stored locally that point to malicious websites. For example, an attacker could tell your PC to make a website point to the IP address of a website running a hack scan that tries to convince you to give up your personal information.
+So if you’re getting weird redirects like this running a reputable anti-malware application may be able to help.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&amp;#x2F;assests&amp;#x2F;dns.jpg&quot; &gt;
+    
+    &lt;figcaption&gt;DNS&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;&lt;h5 id=&quot;verdict&quot;&gt;Verdict&lt;a class=&quot;zola-anchor&quot; href=&quot;#verdict&quot; aria-label=&quot;Anchor link for: verdict&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h5&gt;
+&lt;p&gt;Despite its vulnerabilities, DNS has made the internet extremely easy to use . Thanks to it we don’t have to punch in numerical IP addresses like like phone numbers except longer every time we want to surf the web and given how hard it is for people to remember phone numbers that’s just not a world I would want to live in.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Understanding LVM</title>
+          <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://groovyghost.in/blog/lvm/</link>
+          <guid>https://groovyghost.in/blog/lvm/</guid>
+          <description>&lt;p&gt;Have you ever wanted to take a secondary drive and just combine onto your exsiting system,Well you’re in luck if you are using Linux specifically with LVM.But what is LVM?&lt;&#x2F;p&gt;
+&lt;p&gt;LVM stands for Logical Volume Management. It’s a disk management tool that makes it easier to manage disk space. In LVM, instead of creating partitions, you create logical volumes, and then you can just as easily mount those volumes in your filesystem as you’d a disk partition.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;why-use-lvm&quot;&gt;Why use LVM?&lt;a class=&quot;zola-anchor&quot; href=&quot;#why-use-lvm&quot; aria-label=&quot;Anchor link for: why-use-lvm&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;The main advantage of LVM is how easy it is to resize a volume or volume group. It abstracts away all the ugly parts (partitions, raw disks) and leaves us with a central storage pool to work with.&lt;&#x2F;p&gt;
+&lt;p&gt;If you’ve ever experienced the horror of partition resizing, you’d wanna use LVM.&lt;&#x2F;p&gt;
+&lt;p&gt;Acronyms you must know!
+&lt;em&gt;PV&lt;&#x2F;em&gt; – Physical Volume&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;VG&lt;&#x2F;em&gt; – Volume Group&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;LV&lt;&#x2F;em&gt; – Logical Volume&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&amp;#x2F;assests&amp;#x2F;lvm-guide.jpg&quot;  alt=&quot;LVM&quot;&gt;
+    
+    &lt;figcaption&gt;LVM&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;em&gt;LVM Commands&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;lvm-layer-1-hard-drives-partitions-and-physical-volumes&quot;&gt;LVM Layer 1 – Hard Drives, Partitions, and Physical Volumes&lt;a class=&quot;zola-anchor&quot; href=&quot;#lvm-layer-1-hard-drives-partitions-and-physical-volumes&quot; aria-label=&quot;Anchor link for: lvm-layer-1-hard-drives-partitions-and-physical-volumes&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lvmdiskscan&lt;&#x2F;code&gt; – system readout of volumes and partitions&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvdisplay&lt;&#x2F;code&gt; – display detailed info on physical volumes&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvscan&lt;&#x2F;code&gt; – display disks with physical volumes&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvcreate &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – create a physical volume from sda1&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvchange -x n &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – Disallow using a disk partition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvresize &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – resize sda1 PV to use all of the partition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvresize --setphysicalvolumesize 140G &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – resize sda1 to 140g&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvmove &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – can move data out of sda1 to other PVs in VG.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;pvremove &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – delete Physical volume&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;lvm-layer-2-volume-groups&quot;&gt;LVM Layer 2 – Volume Groups&lt;a class=&quot;zola-anchor&quot; href=&quot;#lvm-layer-2-volume-groups&quot; aria-label=&quot;Anchor link for: lvm-layer-2-volume-groups&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vgcreate vg1 &#x2F;dev&#x2F;sda1 &#x2F;dev&#x2F;sdb1&lt;&#x2F;code&gt; – create a volume group from two drives&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgextend vg1 &#x2F;dev&#x2F;sdb1&lt;&#x2F;code&gt; – add PV to the volume group&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgdisplay vg1&lt;&#x2F;code&gt; – Display details on a volume group&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgscan&lt;&#x2F;code&gt; – list volume groups&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgreduce vg1 &#x2F;dev&#x2F;sda1&lt;&#x2F;code&gt; – Removes the drive from vg1. (use pvmove &#x2F;dev&#x2F;sda1 before removing the drive from vg1)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgchange&lt;&#x2F;code&gt; – you can activate&#x2F;deactive and change perameteres&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgremove vg1&lt;&#x2F;code&gt; – Remove volume group vg1&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgsplit&lt;&#x2F;code&gt; and &lt;code&gt;vgmerge&lt;&#x2F;code&gt; can split and merge volume groups&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;vgrename&lt;&#x2F;code&gt; – renames a volume group&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;lvm-layer-3-logical-volumes-and-file-systems&quot;&gt;LVM Layer 3 – Logical Volumes and File Systems&lt;a class=&quot;zola-anchor&quot; href=&quot;#lvm-layer-3-logical-volumes-and-file-systems&quot; aria-label=&quot;Anchor link for: lvm-layer-3-logical-volumes-and-file-systems&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lvcreate -L 10G vg1&lt;&#x2F;code&gt; – create a 10 GB logical volume on volume group vg1&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lvchange&lt;&#x2F;code&gt; and &lt;code&gt;lvreduce&lt;&#x2F;code&gt; are commands that typically aren’t used&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lvrename&lt;&#x2F;code&gt; – rename logical volume&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lvremove&lt;&#x2F;code&gt; – removes a logical volume&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lvscan&lt;&#x2F;code&gt; – shows logical volumes&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lvdisplay&lt;&#x2F;code&gt; – shows details on logical volumes&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;lvextend -l +100%FREE &#x2F;dev&#x2F;vg1&#x2F;lv1&lt;&#x2F;code&gt; – One of the most common commands used to extend logical volume lv1 that takes up ALL of the remaining free space on the volume group vg1.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;resize2fs &#x2F;dev&#x2F;vg1&#x2F;lv1&lt;&#x2F;code&gt; – resize the file system to the size of the logical volume lv1.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h4&gt;
+&lt;p&gt;LVM is fantastic for managing a system, but remember that the more drives you make in a volume group that the likely it is to fail. Instead of having one point of failure you can open yourself up for multiple points when making a large system with multiple drives.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>10 Underrated Linux commands</title>
+          <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://groovyghost.in/blog/linux-commands/</link>
+          <guid>https://groovyghost.in/blog/linux-commands/</guid>
+          <description>&lt;p&gt;Linux has tons of nifty commands, here&#x27;s 10 super heroic Linux commands that you probably need to add to your toolbox.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Redo last command but with sudo&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;sudo !!&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Open an editor to run a command&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Ctrl+x+e&lt;&#x2F;p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Create a super fast ram disk&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;mkdir -p &#x2F;mnt&#x2F;ram
+
+mount -t tmpfs tmpfs &#x2F;mnt&#x2F;ram -o size=8192M
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Messed up a long command?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;fc&lt;&#x2F;code&gt; will open up your last command in editor.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;netstat: command not found ?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;ss&lt;&#x2F;code&gt; Socket statistics, a substitue of netstat&lt;&#x2F;p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;Quickly create folders&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;mkdir -p folder&#x2F;{sub1,sub2}&#x2F;{sub1,sub2,sub3}
+
+mkdir -p folder&#x2F;{1..100}&#x2F;{1..100}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Also works with number ranges&lt;&#x2F;p&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;Intercept stdout and log to file&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;cat file | tee -a log | cat &amp;gt; &#x2F;dev&#x2F;null
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ol start=&quot;8&quot;&gt;
+&lt;li&gt;Solve simple mathematical calculations from terminal&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;expr&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;expr 2 + 2&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;ol start=&quot;9&quot;&gt;
+&lt;li&gt;Want to know history of last logged in users?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;last&lt;&#x2F;code&gt; This command comes to rescue here&lt;&#x2F;p&gt;
+&lt;ol start=&quot;10&quot;&gt;
+&lt;li&gt;exit terminal but leave all processes running&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;code&gt;disown -a &amp;amp;&amp;amp; exit&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Bonus : &lt;code&gt;python -m http.server&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Creates a simple web page for the current working directory over port 8000.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Learn Markdown</title>
+          <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://groovyghost.in/blog/learn-markdown/</link>
+          <guid>https://groovyghost.in/blog/learn-markdown/</guid>
+          <description>&lt;p&gt;For website&#x2F;blog instead of writing pure HTML and uploading it to a server like a caveman i started using Markdown, a lightweight markup language for creating formatted text using a plain-text editor that is appealing to human readers in its source code form.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;basic-markdown-syntax&quot;&gt;Basic markdown syntax&lt;a class=&quot;zola-anchor&quot; href=&quot;#basic-markdown-syntax&quot; aria-label=&quot;Anchor link for: basic-markdown-syntax&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;md&quot; class=&quot;language-md z-code&quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-block-level z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-heading z-1 z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-heading z-begin z-markdown&quot;&gt;#&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-heading z-1 z-markdown&quot;&gt;&lt;span class=&quot;z-entity z-name z-section z-markdown&quot;&gt;Start a heading with one hash&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-whitespace z-newline z-markdown&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-block-level z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-heading z-2 z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-heading z-begin z-markdown&quot;&gt;##&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-heading z-2 z-markdown&quot;&gt;&lt;span class=&quot;z-entity z-name z-section z-markdown&quot;&gt;Start a subheading with two hashes&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-whitespace z-newline z-markdown&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;Paragraphs are separated by empty lines.
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-bold z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-bold z-begin z-markdown&quot;&gt;**&lt;&#x2F;span&gt;Bold text&lt;span class=&quot;z-punctuation z-definition z-bold z-end z-markdown&quot;&gt;**&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; is wrapped in double asterisks,
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-italic z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-italic z-begin z-markdown&quot;&gt;_&lt;&#x2F;span&gt;italic&lt;span class=&quot;z-punctuation z-definition z-italic z-end z-markdown&quot;&gt;_&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; in underscores,
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-raw z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-raw z-begin z-markdown&quot;&gt;`&lt;&#x2F;span&gt;monospace&lt;span class=&quot;z-punctuation z-definition z-raw z-end z-markdown&quot;&gt;`&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; in backticks.
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-link z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-link z-begin z-markdown&quot;&gt;[&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-link z-inline z-description z-markdown&quot;&gt;A link&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-link z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-link z-end z-markdown&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-link z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-metadata z-begin z-markdown&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-link z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-underline z-link z-markdown&quot;&gt;https:&#x2F;&#x2F;groovyghost.in&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-metadata z-end z-markdown&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;.
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-image z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-image z-begin z-markdown&quot;&gt;![&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-image z-inline z-description z-markdown&quot;&gt;An image&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-image z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-image z-end z-markdown&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-image z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-metadata z-begin z-markdown&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-image z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-underline z-link z-image z-markdown&quot;&gt;&#x2F;avatar.jpeg&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-metadata z-end z-markdown&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block-level z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-raw z-block z-markdown&quot;&gt;    # Indented code block
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block-level z-markdown&quot;&gt;&lt;span class=&quot;z-markup z-raw z-block z-markdown&quot;&gt;    hello() { echo &amp;#39;Hello&amp;#39;; }
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;A list of items:
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-unnumbered z-bullet z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-list_item z-markdown&quot;&gt;-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-unnumbered z-markdown&quot;&gt; &lt;span class=&quot;z-meta z-paragraph z-list z-markdown&quot;&gt;Each item is on its line
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-unnumbered z-bullet z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-list_item z-markdown&quot;&gt;-&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-unnumbered z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-list z-markdown&quot;&gt; Lines start with &lt;span class=&quot;z-markup z-raw z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-raw z-begin z-markdown&quot;&gt;`&lt;&#x2F;span&gt;-&lt;span class=&quot;z-punctuation z-definition z-raw z-end z-markdown&quot;&gt;`&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-unnumbered z-markdown&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;An ordered list:
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-bullet z-markdown&quot;&gt;1&lt;span class=&quot;z-punctuation z-definition z-list_item z-markdown&quot;&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-markdown&quot;&gt; &lt;span class=&quot;z-meta z-paragraph z-list z-markdown&quot;&gt;The first item
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-bullet z-markdown&quot;&gt;1&lt;span class=&quot;z-punctuation z-definition z-list_item z-markdown&quot;&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-list z-markdown&quot;&gt; The second item can start with &lt;span class=&quot;z-markup z-raw z-inline z-markdown&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-raw z-begin z-markdown&quot;&gt;`&lt;&#x2F;span&gt;1.&lt;span class=&quot;z-punctuation z-definition z-raw z-end z-markdown&quot;&gt;`&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; too
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-bullet z-markdown&quot;&gt;1&lt;span class=&quot;z-punctuation z-definition z-list_item z-markdown&quot;&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-list z-markdown&quot;&gt; Markdown handles the numbering for you.
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-markup z-list z-numbered z-markdown&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To convert markdown to HTML you can use &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;kristaps.bsd.lv&#x2F;lowdown&#x2F;&quot;&gt;lowdown&lt;&#x2F;a&gt;, &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;pandoc.org&#x2F;&quot;&gt;pandoc&lt;&#x2F;a&gt; or with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;daringfireball.net&#x2F;projects&#x2F;markdown&#x2F;&quot;&gt;original markdown.pl&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Credit to &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.markdownguide.org&#x2F;basic-syntax&quot;&gt;markdownguide&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

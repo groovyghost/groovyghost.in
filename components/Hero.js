@@ -38,12 +38,12 @@ export default function Hero() {
               <div ref={ref} className="flex cursor-default flex-col space-y-2">
                 <FadeUp duration={0.6}>
                   <h1 className="text-5xl font-semibold sm:text-7xl md:text-8xl xl:text-9xl">
-                    ABCD
+                    Rahul
                   </h1>
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.2}>
                   <h2 className="text-3xl font-medium opacity-80 sm:text-6xl md:text-6xl xl:text-7xl">
-                    XXXX XXXX Engineer.
+                    Cloud Devops Engineer.
                   </h2>
                 </FadeUp>
                 <FadeRight>

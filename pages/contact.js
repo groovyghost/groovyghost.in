@@ -12,21 +12,17 @@ const Contact = () => {
         </h1>
         <div className="pt-10 pb-8">
           <ul className="font-semi-bold flex flex-col space-y-4">
+            <ContactLink href="mailto:grovyghost@protonmail.com" title="gmail" icon="grovyghost" />
+            <ContactLink href="https://github.com/groovyghost" title="github" icon="groovyghost" />
             <ContactLink
-              href="mailto:desaiparth2000@gmail.com"
-              title="gmail"
-              icon="desaiparth2000"
-            />
-            <ContactLink href="https://github.com/pycoder2000" title="github" icon="pycoder2000" />
-            <ContactLink
-              href="https://twitter.com/_ParthDesai_"
+              href="https://twitter.com/RahulA_7200"
               title="twitter"
-              icon="_ParthDesai_"
+              icon="RahulA_7200"
             />
             <ContactLink
-              href="https://www.linkedin.com/in/parth-desai-2bb1b0160/"
+              href="https://www.linkedin.com/in/rahula7200/"
               title="linkedin"
-              icon="parthdesai"
+              icon="rahula7200"
             />
           </ul>
         </div>

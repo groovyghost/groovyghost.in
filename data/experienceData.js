@@ -1,29 +1,29 @@
 const experienceData = [
   {
-    title: 'Data Engineering Intern',
-    company: 'Accenture',
-    location: 'Ahmedabad, India',
-    range: 'January 2022 - May 2022',
-    url: 'https://www.accenture.com/gr-en/about/consulting-index',
+    title: 'Cloud Devops Engineer',
+    company: 'Contus Tech',
+    location: 'Chennai, India',
+    range: 'November 2021 - Present',
+    url: 'https://contus.com',
     text1:
-      'Helped with the digital transformation of BOAT by working on their platform called ByteETL.',
+      'Efficiently transformed 3-tier project deployments, utilizing Ansible and Terraform to achieve a significant 90% reduction in deployment time',
     text2:
-      'Built the encryption component for the platform using Scala and Spark which included 2 encoding functionalities : ENCRYPT and HASH.',
+      'Enhanced project security and optimized CI/CD workflows through the implementation of GitLab CI, SonarQube, and Gradle.',
     text3:
-      'Created JSON wrappers for the encryption components and automated and triggered the pipelines to run at specific intervals using CronJob.',
+      'Streamlined Docker deployment through Bash scripting, significantly slashing build time and enhancing automation.',
   },
   {
-    title: 'Software Engineer Analytics',
-    company: 'HOPS Healthcare',
-    location: 'Ahmedabad, India',
-    range: 'March 2021 - June 2021',
-    url: 'https://hops.healthcare/',
+    title: 'Associate System engineer',
+    company: 'Precision Infomatics',
+    location: 'Chennai, India',
+    range: 'September 2019 - November 2021',
+    url: 'https://www.precisionit.co.in/',
     text1:
-      'Guided by Mr. Vivek Patel, to create a pipeline that extracts essential information from informal conversations.',
+      'Collaborated on the implementation of cloud-based solutions, working towards enhancing scalability and reliability for various applications in a team setting.',
     text2:
-      'Worked on creating a web app for their healthcare system for doctors to analyze and save reports.',
+      'Proficiently managed the installation of patches and software packages, ensuring the seamless functioning and security of Linux systems.',
     text3:
-      'Developed functions for automatically extracting important elements from reports using BioBERT and Regex.',
+      'Under the mentorship of experienced Linux administrators, actively engaged in configuring and maintaining Linux-based systems to ensure optimal performance and security.',
   },
 ]
 

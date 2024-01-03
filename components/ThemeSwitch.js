@@ -34,9 +34,9 @@ const ThemeSwitch = () => {
         }}
       >
         {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
-          <HiSun className="h-4 w-4 hover:animate-spin" />
+          <HiSun className="hover:animate h-4 w-4" />
         ) : (
-          <HiMoon className="h-4 w-4 hover:animate-spin" />
+          <HiMoon className="hover:animate h-4 w-4" />
         )}
       </motion.button>
     </div>

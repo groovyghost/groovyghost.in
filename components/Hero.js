@@ -43,7 +43,7 @@ export default function Hero() {
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.2}>
                   <h2 className="text-3xl font-medium opacity-80 sm:text-6xl md:text-6xl xl:text-7xl">
-                    Cloud Devops Engineer.
+                    Devops Engineer.
                   </h2>
                 </FadeUp>
                 <FadeRight>

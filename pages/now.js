@@ -4,8 +4,6 @@ import { dayjs } from '@/components/DayJS'
 import { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import { getCurrentlyReading } from '@/lib/goodreads'
-import fetcher from 'lib/fetcher'
-import useSWR from 'swr'
 import { FaCloudShowersHeavy } from 'react-icons/fa'
 import {
   BsCloudDrizzleFill,
@@ -73,18 +71,6 @@ export default function Now(currentlyReading) {
     setLastUpdateTime(new Date())
   }, [])
 
-  function formatLastUpdateTime() {
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      timeZoneName: 'short',
-    }
-    return lastUpdateTime.toLocaleDateString(undefined, options)
-  }
   var MyBirthDate = '1998-02-22'
   var birthDate = new Date(MyBirthDate)
 
@@ -142,7 +128,7 @@ export default function Now(currentlyReading) {
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
           <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
-            This page was automatically updated @ {formatLastUpdateTime()}
+            This page was updated @ 3 January 2024
           </div>
         </div>
         {/* Misc */}
@@ -150,11 +136,11 @@ export default function Now(currentlyReading) {
           <div className="-my-6 flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <div className="mt-2 mb-2">
-                <span className="ml-2 font-semibold">Location:</span>
+                <span className="ml-2 font-semibold">Location: </span>
                 <span>Chennai, India</span>
               </div>
               <div className="mt-2 mb-2">
-                <span className="ml-2 font-semibold">Weather:</span>{' '}
+                <span className="ml-2 font-semibold">Weather: </span>{' '}
                 <span>
                   {icons[`_${weatherIcon}`]} Currently <b>{parseInt(temperature)}°C</b>
                   {' with '}
@@ -190,41 +176,25 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Data Engineer at{' '}
+            I work as a Devops Engineer at{' '}
             <Link
-              href={'https://www.accenture.com/'}
+              href={'https://contus.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Accenture
+              Contus
             </Link>
             .
           </p>
           <br />
           <p>
-            I work on building pipelines and automating the entire process using Scala and Gcloud.
+            I work on building pipelines and automating the software development in various cloud
+            infrasturcture.
           </p>
           <br />
           <p>
-            I have been trying to shift my field from Data Engineering to Data Science. I have been
-            constantly applying for the same as well.
-          </p>
-          <br />
-          <p>
-            My location preference is Bangalore but I am open to shift to another place for a better
-            opportunity.
-          </p>
-          <br />
-          <p>
-            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
-            <Link
-              href={
-                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
-              }
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              Machine Learning tutorial
-            </Link>
-            .
+            In addition to my professional pursuits, I am dedicated to expanding my skill set.
+            Currently, I am actively learning data structures and algorithms, as well as exploring
+            the realm of frontend development.
           </p>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
@@ -233,28 +203,8 @@ export default function Now(currentlyReading) {
 
         {/* Personal life */}
         <div className="pt-6">
-          <p>
-            I've been slowly building this website, trying to share interesting things with anyone
-            who wants to read it.{' '}
-            <Link
-              href={'https://www.swyx.io/learn-in-public'}
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              This
-            </Link>{' '}
-            article is a great reason to start your blog.
-          </p>
           <br />
-          <p>
-            I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
-            after I get my admits.
-          </p>
-          <br />
-          <p>
-            I recently started to draft a post about my new Obsidian worklfow, it will be a good
-            one!
-          </p>
+          <p>Looking to improve and manitain this site with my learning and thoughts</p>
         </div>
         <div className="mt-3 text-sm">
           For more examples of folks with /now pages, check out{' '}

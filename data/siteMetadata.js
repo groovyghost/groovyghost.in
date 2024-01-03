@@ -6,7 +6,7 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://groovyghost.dev',
+  siteUrl: 'https://groovyghost.in',
   siteRepo: 'https://github.com/groovyghost/groovyghost.in',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
@@ -15,7 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/groovyghost',
   twitter: 'https://twitter.com/RahulA_7200',
   linkedin: 'https://www.linkedin.com/in/rahula7200/',
-  website: 'https://groovyghost.dev',
+  website: 'https://groovyghost.in',
   locale: 'en-US',
   socialAccount: {
     twitter: 'RahulA_7200',

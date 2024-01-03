@@ -43,7 +43,8 @@ export default function AuthorLayout({ frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building devops pipelines and automating them at{' '}
+                {text1} Currently I'm dedicated to constructing and automating efficient DevOps
+                pipelines at{' '}
                 <Link
                   href={'https://www.contus.com/'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
@@ -64,8 +65,7 @@ export default function AuthorLayout({ frontMatter }) {
             </p>
             <br />
             <p>
-              I am always looking to learn new things. I am currently working on a few projects
-              related to{' '}
+              Outside of work, I'm delving into learning{' '}
               <RoughNotation
                 type="underline"
                 show={true}
@@ -77,20 +77,6 @@ export default function AuthorLayout({ frontMatter }) {
                 <span className="text-black dark:text-white">DSA and Frontend development.</span>
               </RoughNotation>{' '}
             </p>
-
-            <br />
-            <p>
-              I am a strong advocate for open source and I am always interested in working on new
-              projects with new people. Feel free to reach out if you have anything to talk about,
-              you can reach me through{' '}
-              <Link
-                href={'mailto:grovyghost@protonmail.com'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                Mail
-              </Link>{' '}
-            </p>
-            <br />
             <br />
             <h1>About this site</h1>
             <p>
@@ -98,7 +84,7 @@ export default function AuthorLayout({ frontMatter }) {
               to share code and thoughts. Opinions are my own.
             </p>
             <p>
-              I learnt how to build this site from the most awesome people in the community:
+              I learnt to build this site from the most awesome people in the community:
               <ul>
                 <li>
                   <Link
@@ -107,7 +93,7 @@ export default function AuthorLayout({ frontMatter }) {
                   >
                     Timothy's Next.js and Tailwind CSS template
                   </Link>
-                  : Template starter where I bootstrapped the project.
+                  : Template starter.
                 </li>
                 <li>
                   <Link
@@ -116,7 +102,7 @@ export default function AuthorLayout({ frontMatter }) {
                   >
                     Parth Desai
                   </Link>
-                  : Now page, navigation style, animations and much more.
+                  : Design , navigation style, animations and much more.
                 </li>
               </ul>
             </p>

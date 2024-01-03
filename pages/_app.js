@@ -44,7 +44,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
       {isDevelopment && isSocket && <ClientReload />}
       <LayoutWrapper>
         <Component {...pageProps} />
-         <Analytics />
+        <Analytics />
       </LayoutWrapper>
     </ThemeProvider>
   )

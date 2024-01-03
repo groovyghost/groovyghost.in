@@ -1,4 +1,5 @@
 import '@/css/tailwind.css'
+import { Analytics } from '@vercel/analytics/react';
 import '@/css/extra.css'
 import 'katex/dist/katex.css'
 import '@fontsource/inter/variable-full.css'
@@ -43,6 +44,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
       {isDevelopment && isSocket && <ClientReload />}
       <LayoutWrapper>
         <Component {...pageProps} />
+         <Analytics />
       </LayoutWrapper>
     </ThemeProvider>
   )

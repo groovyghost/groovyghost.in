@@ -9,12 +9,11 @@ import siteMetadata from '@/data/siteMetadata'
 import { HiOutlinePencil, HiOutlineClock } from 'react-icons/hi'
 import { BsCalendarDate } from 'react-icons/bs'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, images, tags, readingTime } = frontMatter
+  const { slug, date, title, tags, readingTime } = frontMatter
   return (
     <SectionContainer>
       <BlogSEO

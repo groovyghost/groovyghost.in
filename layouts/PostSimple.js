@@ -7,8 +7,8 @@ import formatDate from '@/lib/utils/formatDate'
 import { HiOutlinePencil, HiOutlineClock } from 'react-icons/hi'
 import { BsCalendarDate } from 'react-icons/bs'
 
-export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, date, title, summary, readingTime } = frontMatter
+export default function PostLayout({ frontMatter, next, prev, children }) {
+  const { date, title, readingTime } = frontMatter
 
   return (
     <SectionContainer>

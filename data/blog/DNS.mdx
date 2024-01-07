@@ -1,0 +1,42 @@
+---
+title: DNS - How it works?
+date: "2021-10-20"
+tags: ['DNS']
+draft: false
+summary: Even if not actively noticed, DNS, or the Domain Name System, streamlines internet browsing by translating user-friendly domain names into numerical IP addresses.
+---
+
+
+**What is DNS**
+
+Suppose I were to get into a taxi after a night on the town and tell the driver “My house” when he asked me where we’re headed,Unless the driver some how very creepily already knows where I live he’ll probably tell me to stop being a tool and give him an actual address where he can actually drop me off. Although this scenario has probably occurred in plenty of taxi cabs, your computer or phone can have a much easier time figuring out where to take you on the internet thanks to the *Domain Name System* commonly referred to as DNS.
+
+You see even though most of us get to our favorite websites by punching in addresses like google.com or groovyghost.in, your browser actually needs to know the IP address of the site you’re trying to access.
+
+So to do this it sends a request to the DNS which is sort of like the Internet’s version of the Yellow Pages that matches a site URL or a **“Uniform Resource locator”** to an IP address.
+
+##### How does DNS work?
+- The DNS request first goes to a recursive name server which is typically operated by your internet service provider but you can also use public servers managed by Google or other organizations if your ISP resolver is having issues.
+
+- A recursive name server might have the IP address of the website you want to access already stored but if it doesn’t it will go to one of [13 root servers](https://www.iana.org/domains/root/servers) which manage requests for top-level domains like com or.org.Although that seems like a tiny number of servers by the way they actually use redundant physical Hardware all over the globe to make sure these requests are handled and handled quickly.
+
+- Your request is then sent to the appropriate top level domain server which will then contact authoritative name servers that contain a authoritative list of IP addresses and matching URLs which is updated whenever someone buys and registers a domain once the IP address you want is retrieved.
+
+- It’s sent back to the recursive name server and then on to your computer.
+
+##### DNS Caching
+To save time in the future and make things more efficient both the recursive name server and your own computer will cache DNS entries for a while so the next time you want to visit the same website you won’t have to go through this whole rigmarole instead your computer will either know the correct IP right away or it will be able to get it directly from the recursive server.
+
+##### Common DNS issue
+DNS usually works fairly well for most people but if a website changes IP addresses this can cause problems especially if your computer is trying to use its own cache. This will usually manifest as lots of random 404 errors or taxi drivers taking you to the wrong place if we were to look back to our original analogy.
+
+So if you’re running Windows it’s actually pretty easy to clear out your DNS cache just by opening the command prompt as an admin and entering ipconfig/flushdns this command which hopefully will fix the problem.
+
+##### DNS Poisoning
+However you could run into more serious problems if a piece of malware has poisoned your DNS cache by making DNS entries that are stored locally that point to malicious websites. For example, an attacker could tell your PC to make a website point to the IP address of a website running a hack scan that tries to convince you to give up your personal information.
+So if you’re getting weird redirects like this running a reputable anti-malware application may be able to help.
+<p align="center">
+<img className="inline" src="/static/images/Blog/dns.jpg" alt="DNS meme" />
+</p>
+##### Verdict
+Despite its vulnerabilities, DNS has made the internet extremely easy to use . Thanks to it we don’t have to punch in numerical IP addresses like like phone numbers except longer every time we want to surf the web and given how hard it is for people to remember phone numbers that’s just not a world I would want to live in.

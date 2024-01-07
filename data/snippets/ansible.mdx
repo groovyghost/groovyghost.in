@@ -1,0 +1,32 @@
+---
+title: 'Ansible'
+date: '2023-12-17'
+draft: false
+summary: "Ansible commands"
+images: []
+layout: PostSimple
+---
+## Get a list of facts
+
+```sh
+ansible -m setup localhost | sed '1c {' | jq '.ansible_facts | keys'
+```
+
+## Run playbook without inventory file
+
+```sh
+ansible-playbook --connection=local --inventory xxx.xxx.xxx.xxx, playbook.yml # be aware of the comma
+ansible all -i localhost, -m setup -c local
+```
+
+## Output shell command
+
+```yaml
+- name: debug
+  shell: ls -al /var/www/
+  register: out
+
+- name: out
+  debug:
+    var: out.stdout_lines
+```

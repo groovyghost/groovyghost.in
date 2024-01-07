@@ -1,0 +1,19 @@
+---
+title: 'Vim/Neovim'
+date: '2023-12-23'
+draft: false
+summary: "Vim helpful snippets"
+images: []
+layout: PostSimple
+---
+
+## To remove all commented lines in a file
+```sh
+:g/^\s*#/d
+```
+
+- `^` Move to first non-blank character of the line
+
+- `g_` Move the last non-blank character of the line
+
+- `~` Toggle case of current character

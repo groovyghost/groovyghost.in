@@ -9,7 +9,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { HiOutlinePencil, HiOutlineClock } from 'react-icons/hi'
 import { BsCalendarDate } from 'react-icons/bs'
 
-
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {

@@ -204,7 +204,7 @@ export default function Now(currentlyReading) {
         {/* Personal life */}
         <div className="pt-6">
           <br />
-          <p>Looking to improve and manitain this site with my learning and thoughts</p>
+          <p>Looking to improve and maintain this site with my learning and thoughts</p>
         </div>
         <div className="mt-3 text-sm">
           For more examples of folks with /now pages, check out{' '}

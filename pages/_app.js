@@ -1,6 +1,7 @@
 import '@/css/tailwind.css'
 import { Analytics } from '@vercel/analytics/react'
 import '@/css/extra.css'
+import '@/css/prism.css'
 import 'katex/dist/katex.css'
 import '@fontsource/inter/variable-full.css'
 import { ThemeProvider } from 'next-themes'

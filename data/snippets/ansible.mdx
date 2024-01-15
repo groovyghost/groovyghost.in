@@ -8,13 +8,13 @@ layout: PostSimple
 ---
 ## Get a list of facts
 
-```sh
+```bash
 ansible -m setup localhost | sed '1c {' | jq '.ansible_facts | keys'
 ```
 
 ## Run playbook without inventory file
 
-```sh
+```bash
 ansible-playbook --connection=local --inventory xxx.xxx.xxx.xxx, playbook.yml # be aware of the comma
 ansible all -i localhost, -m setup -c local
 ```

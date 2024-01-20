@@ -1,4 +1,4 @@
-[submodule "resume"]
-        path = public
-        url = git@github.com:groovyghost/resume.git
-        branch = develop
+[submodule "public/resume"]
+	path = public/resume
+	url = git@github.com:groovyghost/resume.git
+    branch = develop

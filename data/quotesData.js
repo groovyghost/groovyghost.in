@@ -1,46 +1,30 @@
 export const quotes = [
   {
-    author: 'Steve Jobs',
-    quote: `Your time is limited, so don't waste it living someone else's life.`,
+    author: 'Bruce Lee',
+    quote: `The key to immortality is first living a life worth remembering.`,
   },
   {
-    author: 'Rafael Nadal',
-    quote: `If, if, if... doesn't exist.`,
+    author: 'Richard P. Feynman',
+    quote: `Nobody ever figures out what life is all about, and it doesn't matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough`,
   },
   {
-    author: 'Rafael Nadal',
-    quote: `The glory is being happy. The glory is not winning here or winning there. The glory is enjoying practicing, enjoy every day, enjoying to work hard, trying to be a better player than before.`,
+    author: 'Sir Robert Baden-Powell',
+    quote: `Leaving the World a Better Place than How We Found It`,
   },
   {
-    author: 'Rafael Nadal',
-    quote: `If you don't lose, you cannot enjoy the victories. So I have to accept both things.`,
+    author: 'Buddha',
+    quote: `A jug fills drop by drop.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `When you do something best in life, you don't really want to give that up, and for me it's tennis.`,
+    author: 'A. P. J. Abdul Kalam',
+    quote: `Man needs his difficulties because they are necessary to enjoy success.`,
   },
   {
-    author: 'Roger Federer',
-    quote: `There's no way around hard work. Embrace it.`,
+    author: 'Horace',
+    quote: `Non omnis moriar [My Work shall live; I shall not wholly die]`,
   },
   {
-    author: 'Roger Federer',
-    quote: `You have to put in the hours because there's always something which you can improve.`,
-  },
-  {
-    author: 'Roger Federer',
-    quote: `A man who wins is a man who thinks he can.`,
-  },
-  {
-    author: 'Roger Federer',
-    quote: `When you're good at something, make that everything.`,
-  },
-  {
-    author: 'Roger Federer',
-    quote: `I've practiced so much.`,
-  },
-  {
-    author: 'Michael Jordan',
-    quote: `limits, like fears, are often just illusions`,
+    author: 'Bill Gates',
+    quote: `Teaching a man to fish is better than giving the man a fish`,
   },
 ]

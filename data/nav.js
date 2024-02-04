@@ -6,8 +6,9 @@ export const navigation = {
     { name: 'Snippets', href: '/snippets' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Now', href: '/now' },
     { name: 'Quotes', href: '/quotes' },
+    { name: 'Now', href: '/now' },
+    { name: 'Resume', href: '/resume.pdf' },
     { name: 'RSS', href: '/feed.xml' },
   ],
 }

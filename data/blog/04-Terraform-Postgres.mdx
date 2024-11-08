@@ -1,0 +1,33 @@
+---
+title: Use PostgreSQL To Store Terraform State
+date: "2024-08-19"
+tags: ['Terraform']
+draft: false
+summary: Usually Terraform backend is configured with S3.Lets try out with PostgreSQL.
+---
+
+
+**What is terraform backend**
+
+Terraform backend determines how the Terraform state is stored and loaded. By default the state is local, but it's possible to set a remote backend.
+If supported by your backend, Terraform will lock your state for all operations that could write state. This prevents others from acquiring the lock and potentially corrupting your state.
+
+##### State Locking?
+State locking is a mechanism that blocks an operations against a specific state file from multiple callers so as to avoid conflicting operations from different team members. Once the first caller's operation's lock is released the other team member may go ahead to carryout his own operation. Nevertheless Terraform will first check the state file to see if the desired resource already exist and if not it goes ahead to create it.
+
+##### DNS Caching
+To save time in the future and make things more efficient both the recursive name server and your own computer will cache DNS entries for a while so the next time you want to visit the same website you won’t have to go through this whole rigmarole instead your computer will either know the correct IP right away or it will be able to get it directly from the recursive server.
+
+##### Common DNS issue
+DNS usually works fairly well for most people but if a website changes IP addresses this can cause problems especially if your computer is trying to use its own cache. This will usually manifest as lots of random 404 errors or taxi drivers taking you to the wrong place if we were to look back to our original analogy.
+
+So if you’re running Windows it’s actually pretty easy to clear out your DNS cache just by opening the command prompt as an admin and entering ipconfig/flushdns this command which hopefully will fix the problem.
+
+##### DNS Poisoning
+However you could run into more serious problems if a piece of malware has poisoned your DNS cache by making DNS entries that are stored locally that point to malicious websites. For example, an attacker could tell your PC to make a website point to the IP address of a website running a hack scan that tries to convince you to give up your personal information.
+So if you’re getting weird redirects like this running a reputable anti-malware application may be able to help.
+<p align="center">
+<img className="inline" src="/static/images/Blog/dns.jpg" alt="DNS meme" />
+</p>
+##### Verdict
+Despite its vulnerabilities, DNS has made the internet extremely easy to use . Thanks to it we don’t have to punch in numerical IP addresses like like phone numbers except longer every time we want to surf the web and given how hard it is for people to remember phone numbers that’s just not a world I would want to live in.

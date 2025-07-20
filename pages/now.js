@@ -128,7 +128,7 @@ export default function Now(currentlyReading) {
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
           <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
-            This page was updated @ 3 January 2024
+            This page was updated @ 20 July 2025
           </div>
         </div>
         {/* Misc */}
@@ -176,19 +176,24 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Devops Engineer at{' '}
+            I work as a Cloud / Devops Engineer at{' '}
             <Link
-              href={'https://contus.com/'}
+              href={'https://www.swaasitsolutions.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Contus
+              Swaas 
+            </Link> Outsourced to{' '}
+            <Link
+              href={'https://www.iff.com/'}
+              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
+            >
+              IFF
             </Link>
             .
           </p>
           <br />
           <p>
-            I work on building pipelines and automating the software development in various cloud
-            infrasturcture.
+            I work on designing, implementing, managing, and troubleshooting Kubernetes clusters
           </p>
           <br />
           <p>

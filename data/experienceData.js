@@ -1,9 +1,22 @@
 const experienceData = [
+    {
+    title: 'Senior Cloud/DevOps Engineer',
+    company: 'Swaas IT Solutions',
+    location: 'Chennai, India',
+    range: 'November 2024 - Present',
+    url: 'https://www.swaasitsolutions.com/',
+    text1:
+      'Outsourced to IFF (International Flavors & Fragrances) as a Senior Cloud/DevOps Engineer, designing and implementation of cloud kubernetes cluster solutions.',
+    text2:
+      'Built reusable Terraform modules for AWS services including EKS, ALB, IAM, and S3, streamlining infrastructure provisioning.',
+    text3:
+      'Built a custom internal tool with go and react for multi k8s cluster management and governance.', 
+    },
   {
     title: 'Cloud Devops Engineer',
     company: 'Contus Tech',
     location: 'Chennai, India',
-    range: 'November 2021 - Present',
+    range: 'November 2021 - November 2024',
     url: 'https://contus.com',
     text1:
       'Efficiently transformed 3-tier project deployments, utilizing Ansible and Terraform to achieve a significant 90% reduction in deployment time',

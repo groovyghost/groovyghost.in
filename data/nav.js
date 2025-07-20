@@ -9,6 +9,5 @@ export const navigation = {
     { name: 'Quotes', href: '/quotes' },
     { name: 'Now', href: '/now' },
     { name: 'Resume', href: '/resume.pdf' },
-    { name: 'RSS', href: '/feed.xml' },
   ],
 }

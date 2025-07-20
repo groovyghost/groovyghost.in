@@ -43,14 +43,13 @@ export default function AuthorLayout({ frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently I'm dedicated to constructing and automating efficient DevOps
-                pipelines at{' '}
+                {text1} Currently I'm dedicated to designing and manage kubernetes clusters at{' '}
                 <Link
-                  href={'https://www.contus.com/'}
+                  href={'https://www.iff.com/'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Contus
-                </Link>
+                  IFF
+                </Link>.
               </RoughNotation>
             </p>
             <br />

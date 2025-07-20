@@ -29,8 +29,7 @@ export default function Journey() {
               y: 0,
             },
           }}
-        >
-        </motion.div>
+        ></motion.div>
       </div>
     </>
   )

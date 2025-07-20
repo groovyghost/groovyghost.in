@@ -181,8 +181,9 @@ export default function Now(currentlyReading) {
               href={'https://www.swaasitsolutions.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Swaas 
-            </Link> Outsourced to{' '}
+              Swaas
+            </Link>
+            Outsourced to{' '}
             <Link
               href={'https://www.iff.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"

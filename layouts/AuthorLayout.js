@@ -49,7 +49,7 @@ export default function AuthorLayout({ frontMatter }) {
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
                   IFF
-                </Link>.
+                </Link>
               </RoughNotation>
             </p>
             <br />
